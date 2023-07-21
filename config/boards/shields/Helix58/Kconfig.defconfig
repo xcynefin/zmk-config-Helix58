@@ -1,0 +1,6 @@
+if SHIELD_HELIX58
+
+config ZMK_KEYBOARD_NAME
+    default "Helix58_right"
+
+endif
