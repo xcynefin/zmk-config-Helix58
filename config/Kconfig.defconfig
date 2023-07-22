@@ -1,4 +1,4 @@
-if SHIELD_Helix58_LEFT
+if SHIELD_HELIX58_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "Helix58SW"
