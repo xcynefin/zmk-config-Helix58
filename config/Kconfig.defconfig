@@ -1,6 +1,16 @@
-if SHIELD_HELIX58
+if SHIELD_Helix58_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Helix58_right"
+    default "My Board"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_Helix58_LEFT || SHIELD_Helix58_RIGHT
+
+config ZMK_SPLIT
+    default y
 
 endif
