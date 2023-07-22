@@ -8,7 +8,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_Helix58_LEFT || SHIELD_Helix58_RIGHT
+if SHIELD_HELIX58_LEFT || SHIELD_HELIX58_RIGHT
 
 config ZMK_SPLIT
     default y
