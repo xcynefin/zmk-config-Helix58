@@ -14,6 +14,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: HELIX58_LEFT
+    shield: Helix58_left
   - board: nice_nano_v2
-    shield: HELIX58_RIGHT
+    shield: Helix58_right
