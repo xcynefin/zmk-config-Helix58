@@ -21,6 +21,6 @@
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B  &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RET
                         &kp LCTRL &kp LGUI &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp RALT &kp DEL
             >;
-        }
-    }
-}
+        };
+    };
+};
