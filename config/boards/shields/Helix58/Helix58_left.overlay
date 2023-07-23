@@ -1,5 +1,4 @@
 #include "Helix58.dtsi" 
-SHIELD_HELIX58
 &default_kscan {
     col-gpios
         = <&pro_micro 19 GPIO_ACTIVE_HIGH> 
