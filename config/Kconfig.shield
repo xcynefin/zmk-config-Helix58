@@ -1,5 +1,5 @@
-config SHIELD_HELIX58
+config SHIELD_HELIX58_LEFT
     def_bool $(shields_list_contains,Helix58_left)
 
-config SHIELD_HELIX58
+config SHIELD_HELIX58_RIGHT
     def_bool $(shields_list_contains,Helix58_right)
