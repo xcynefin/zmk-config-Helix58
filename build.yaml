@@ -17,3 +17,5 @@ include:
     shield: Helix58_left
   - board: nice_nano_v2
     shield: Helix58_right
+  - board: nice_nano_v2
+    shield: settings_reset
