@@ -27,13 +27,13 @@
         };
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   | SLEEP|SOFTOFF|       |      |       |       |
-// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-// |       |     |     |      |      |      |   RESET|  |RESET  |      |  _    |  +    |  {   |   }   |  "|"  |
-//                     |      |      |      |        |  |       |      |       |       |
+// | BTCLR | BT1 | BT2 |  BT3  |  BT4 |  BT5 |                   | BTPWR|       |       |      |       |       |
+// |  F1   |  F2 |  F3 |  F4   |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
+// |   `   |  !  |  @  |  #    |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
+// |       |     |     |       |      |      |   RESET|  |RESET  |      |  _    |  +    |  {   |   }   |  "|"  |
+//                     |SOFTOFF|      |      |        |  |       |      |       |SOFTOFF|
         bindings = <
-&bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                                             &kp K_SLEEP &trans  &trans           &trans    &trans    &trans
+&bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                                             &kbt BT_PWR &trans  &trans           &trans    &trans    &trans
 &kp F1     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                                                   &kp F7      &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
 &kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                                                &kp CARET   &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
 &trans     &trans           &trans            &trans            &trans       &trans                                                   &trans      &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
@@ -42,17 +42,17 @@
         };
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |   7  |   8   |   9   |   *  |       |        |
-// |       |     |     |      |      |      |                   |   4  |   5   |   6   |   -  |       |        |
-// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |   1  |   2   |   3   |   +  |   ^   |        |
-// |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |  BOOT  |  | BOOT  |   0  |   .   |  ENTER|  <-  |   v   |   ->   |
-//                     |      |      |      |        |  |       |      |       |       |
+// |       |     |     |       |      |      |                   |   7  |   8   |   9   |   *  |       |        |
+// |       |     |     |       |      |      |                   |   4  |   5   |   6   |   -  |       |        |
+// |   F1  |  F2 |  F3 |  F4   |  F5  |  F6  |                   |   1  |   2   |   3   |   +  |   ^   |        |
+// |   F7  |  F8 |  F9 |  F10  |  F11 |  F12 |  BOOT  |  | BOOT  |   0  |   .   |  ENTER|  <-  |   v   |   ->   |
+//                     |SOFTOFF|      |      |        |  |       |      |       |       |
             bindings = <
 &trans    &trans &trans &trans  &trans  &trans                                                &kp N7      &kp N8    &kp N9    &kp KP_ASTERISK   &trans    &trans
 &trans    &trans &trans &trans  &trans  &trans                                                &kp N4      &kp N5    &kp N6    &kp MINUS         &trans    &trans
 &kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                                                &kp N1      &kp N2    &kp N3    &kp PLUS          &kp UP    &trans
 &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12                                               &kp N0      &kp DOT   &kp RET    &kp LEFT          &kp DOWN  &kp RIGHT
-                        &trans  &trans  &trans    &trans &bootloader   &bootloader  &trans    &trans      &trans    &trans
+                        &soft_off  &trans  &trans    &trans &bootloader   &bootloader  &trans    &trans      &trans    &trans
             >;
         };
     };
