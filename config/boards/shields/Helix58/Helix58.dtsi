@@ -31,22 +31,3 @@
                 >;
         };
 };
-
-&spi1 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-    sck-pin = <&pro_micro 6>;
-    mosi-pin = <&pro_micro 5>;
-    cs-gpio = <&pro_micro 2 0>
-    oled_display: display@0 {
-        compatible = "solomon,ssd1306";
-        reg = <0>; 
-        spi-max-frequency = <8000000>;
-
-        width = <160>;
-        height = <68>;
-        segment-remap;
-        com-invdir;
-
-    };
-};
