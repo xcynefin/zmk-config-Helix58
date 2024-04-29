@@ -5,6 +5,12 @@ config ZMK_KEYBOARD_NAME
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
+
+config ZMK_DISPLAY
+    default y
+
+config ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
+    default y
 endif
 
 if SHIELD_HELIX58_LEFT || SHIELD_HELIX58_RIGHT
@@ -19,11 +25,5 @@ config ZMK_IDLE_SLEEP_TIMEOUT
     default 300000
 
 config ZMK_PM_SOFT_OFF
-    default y
-
-config ZMK_DISPLAY
-    default y
-
-config ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
     default y
 endif
