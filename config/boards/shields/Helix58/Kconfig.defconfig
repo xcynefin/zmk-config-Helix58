@@ -27,9 +27,6 @@ config ZMK_DISPLAY
 config ZMK_WIDGET_BATTERY_STATUS_SHOW_PERCENTAGE
     default y
 
-config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
-    default y
-
 config ZMK_WIDGET_WPM_STATUS
     default y
 endif
